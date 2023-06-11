@@ -61,7 +61,27 @@ RSpec.describe WeatherService do
         expect(daily[:astro][:sunrise]).to be_a String
         expect(daily[:astro]).to have_key :sunset
         expect(daily[:astro][:sunset]).to be_a String
-       
+      end
+    end
+
+    it 'can return hourly weather for the current day', :vcr do
+      weather_service = WeatherService.new
+      weather_results = weather_service.get_weather('39.74001', '-104.99202')
+
+      expect(weather_results[:forecast][:forecastday][0]).to have_key :hour
+      expect(weather_results[:forecast][:forecastday][0][:hour]).to be_an Array
+
+      weather_results[:forecast][:forecastday][0][:hour].each do |hourly|
+        expect(hourly).to have_key :time
+        expect(hourly[:time]).to be_a String
+        expect(hourly).to have_key :temp_f
+        expect(hourly[:temp_f]).to be_a Float
+        expect(hourly).to have_key :condition
+        expect(hourly[:condition]).to have_key :text
+        expect(hourly[:condition][:text]).to be_a String
+        expect(hourly[:condition]).to have_key :icon
+        expect(hourly[:condition][:icon]).to be_a String
+        
       end
     end
   end
