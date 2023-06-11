@@ -7,6 +7,7 @@ class WeatherFacade
   end
 
   def weather
+    # require 'pry'; binding.pry
     @_weather ||= Weather.new(all_weather_data)
   end
 
@@ -21,11 +22,11 @@ class WeatherFacade
     end
 
     def get_map
-      @_get_map ||= map_service.get_map(@map)[:results[0][:location][0]]
+      @_get_map ||= map_service.get_map(@map)[:results][0][:locations][0]
     end
 
     def get_weather
-      @_get_weather ||= weather_servicec.get_weather(@lat, @lon)
+      @_get_weather ||= weather_service.get_weather(@lat, @lon)
     end
 
     def current_weather
