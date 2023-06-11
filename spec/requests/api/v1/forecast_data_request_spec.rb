@@ -43,7 +43,7 @@ RSpec.describe 'ForecastData', type: :request do
       expect(current_forecast[:uvi]).to be_an Float
 
       expect(weather_stats[:data][:attributes][:daily_weather]).to be_an Array
-
+  #  require 'pry'; binding.pry   
       weather_stats[:data][:attributes][:daily_weather].each do |daily|
         expect(daily).to be_a Hash
         expect(daily).to have_key :date
@@ -53,9 +53,9 @@ RSpec.describe 'ForecastData', type: :request do
         expect(daily).to have_key :sunset
         expect(daily[:sunset]).to be_a String
         expect(daily).to have_key :max_temp
-        expect(daily[:max_temp]).to eq(nil)
+        expect(daily[:max_temp]).to be_a Float
         expect(daily).to have_key :min_temp
-        expect(daily[:min_temp]).to eq(nil)
+        expect(daily[:min_temp]).to be_a Float
         expect(daily).to have_key :condition
         expect(daily[:condition]).to be_a String
         expect(daily).to have_key :icon
