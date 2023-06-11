@@ -49,8 +49,8 @@ class WeatherFacade
         date: daily[:date],
         sunrise: daily[:astro][:sunrise],
         sunset: daily[:astro][:sunset],
-        max_temp: daily[:day][:max_temp_f],
-        min_temp: daily[:day][:min_temp_f],
+        max_temp: daily[:day][:maxtemp_f],
+        min_temp: daily[:day][:mintemp_f],
         condition: daily[:day][:condition][:text],
         icon: daily[:day][:condition][:icon]
       }
