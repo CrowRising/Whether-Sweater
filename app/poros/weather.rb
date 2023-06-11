@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 class Weather
   attr_reader :id,
-              :current_weather, 
-              :daily_weather, 
+              :current_weather,
+              :daily_weather,
               :hourly_weather
 
   def initialize(data)
