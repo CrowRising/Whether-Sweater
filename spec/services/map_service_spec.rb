@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe MapService do
@@ -9,7 +11,7 @@ RSpec.describe MapService do
       expect(map_results).to be_a Hash
       expect(map_results).to have_key :results
       expect(map_results[:results][0][:locations][0][:latLng]).to have_key :lat
-      expect(map_results[:results][0][:locations][0][:latLng]).to have_key :lng 
+      expect(map_results[:results][0][:locations][0][:latLng]).to have_key :lng
       expect(map_results[:results][0][:locations][0][:latLng][:lat]).to be_a Float
       expect(map_results[:results][0][:locations][0][:latLng][:lng]).to be_a Float
     end

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 11 Jun 2023 02:03:09 GMT
+      - Sun, 11 Jun 2023 05:10:59 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -29,7 +29,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Server:
-      - BunnyCDN-IL1-1069
+      - BunnyCDN-IL1-1029
       Cdn-Pullzone:
       - '93447'
       Cdn-Uid:
@@ -45,21 +45,21 @@ http_interactions:
       Cdn-Requestpullcode:
       - '200'
       Cdn-Cachedat:
-      - 06/11/2023 02:03:09
+      - 06/11/2023 05:10:57
       Cdn-Edgestorageid:
       - '941'
       Cdn-Status:
       - '200'
       Cdn-Requestid:
-      - cedf56aeff6b805c5a0d4f816d066dd9
+      - 37af8e900277440b9ec4cf0fc4bfff4a
       Cdn-Cache:
-      - EXPIRED
+      - HIT
     body:
       encoding: ASCII-8BIT
       string: '{"location":{"name":"Denver","region":"Colorado","country":"United
-        States of America","lat":39.74,"lon":-104.99,"tz_id":"America/Denver","localtime_epoch":1686448989,"localtime":"2023-06-10
-        20:03"},"current":{"last_updated":"2023-06-10 20:00","temp_f":62.2,"condition":{"text":"Moderate
-        or heavy rain with thunder","icon":"//cdn.weatherapi.com/weather/64x64/day/389.png"},"humidity":55,"feelslike_f":62.2,"vis_miles":9.0,"uv":3.0},"forecast":{"forecastday":[{"date":"2023-06-10","day":{"maxtemp_f":75.9,"mintemp_f":54.5,"totalsnow_cm":0.0,"condition":{"text":"Patchy
+        States of America","lat":39.74,"lon":-104.99,"tz_id":"America/Denver","localtime_epoch":1686460257,"localtime":"2023-06-10
+        23:10"},"current":{"last_updated":"2023-06-10 23:00","temp_f":54.9,"condition":{"text":"Partly
+        cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png"},"humidity":80,"feelslike_f":55.8,"vis_miles":9.0,"uv":1.0},"forecast":{"forecastday":[{"date":"2023-06-10","day":{"maxtemp_f":75.9,"mintemp_f":54.5,"totalsnow_cm":0.0,"condition":{"text":"Patchy
         rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"}},"astro":{"sunrise":"05:32
         AM","sunset":"08:27 PM"},"hour":[{"time":"2023-06-10 00:00","temp_f":57.4,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"}},{"time":"2023-06-10
         01:00","temp_f":57.4,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"}},{"time":"2023-06-10
@@ -213,5 +213,5 @@ http_interactions:
         21:00","temp_f":60.8,"condition":{"text":"Light rain shower","icon":"//cdn.weatherapi.com/weather/64x64/night/353.png"}},{"time":"2023-06-15
         22:00","temp_f":60.3,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"}},{"time":"2023-06-15
         23:00","temp_f":59.7,"condition":{"text":"Light rain shower","icon":"//cdn.weatherapi.com/weather/64x64/night/353.png"}}]}]}}'
-  recorded_at: Sun, 11 Jun 2023 02:03:09 GMT
+  recorded_at: Sun, 11 Jun 2023 05:10:59 GMT
 recorded_with: VCR 6.1.0
