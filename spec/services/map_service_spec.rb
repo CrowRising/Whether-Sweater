@@ -12,7 +12,6 @@ RSpec.describe MapService do
       expect(map_results[:results][0][:locations][0][:latLng]).to have_key :lng 
       expect(map_results[:results][0][:locations][0][:latLng][:lat]).to be_a Float
       expect(map_results[:results][0][:locations][0][:latLng][:lng]).to be_a Float
-      
     end
   end
 end
