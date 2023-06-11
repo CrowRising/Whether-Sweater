@@ -25,6 +25,14 @@ RSpec.describe WeatherFacade do
       expect(weather_stats.daily_weather.first).to have_key :min_temp
       expect(weather_stats.daily_weather.first).to have_key :icon
       expect(weather_stats.daily_weather.count).to eq(5)
+
+      expect(weather_stats.hourly_weather).to be_an Array
+      expect(weather_stats.hourly_weather.count).to eq(24)
+      expect(weather_stats.hourly_weather.first).to be_a Hash
+      expect(weather_stats.hourly_weather.first).to have_key :time
+      expect(weather_stats.hourly_weather.first).to have_key :temp
+      expect(weather_stats.hourly_weather.first).to have_key :condition
+      expect(weather_stats.hourly_weather.first).to have_key :icon
     end
   end
 end
