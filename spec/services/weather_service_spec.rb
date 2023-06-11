@@ -35,6 +35,35 @@ RSpec.describe WeatherService do
       expect(weather_results[:forecast][:forecastday][0][:day][:condition]).to have_key :icon
       expect(weather_results[:forecast][:forecastday][0][:day][:condition][:icon]).to be_a String
     end
+
+    it 'can return daily weather for a 5 day forecast', :vcr do
+      weather_service = WeatherService.new
+      weather_results = weather_service.get_weather('39.74001', '-104.99202')
+
+      expect(weather_results).to have_key :forecast
+      expect(weather_results[:forecast][:forecastday]).to be_an Array
+
+      weather_results[:forecast][:forecastday].each do |daily|
+        expect(daily).to have_key :date
+        expect(daily[:date]).to be_a String
+        expect(daily).to have_key :day
+        expect(daily[:day]).to be_a Hash
+        expect(daily[:day]).to have_key :maxtemp_f
+        expect(daily[:day][:maxtemp_f]).to be_a Float
+        expect(daily[:day]).to have_key :mintemp_f
+        expect(daily[:day][:mintemp_f]).to be_a Float
+        expect(daily[:day]).to have_key :condition
+        expect(daily[:day][:condition]).to have_key :text
+        expect(daily[:day][:condition][:text]).to be_a String
+        expect(daily[:day][:condition]).to have_key :icon
+        expect(daily[:day][:condition][:icon]).to be_a String
+        expect(daily[:astro]).to have_key :sunrise
+        expect(daily[:astro][:sunrise]).to be_a String
+        expect(daily[:astro]).to have_key :sunset
+        expect(daily[:astro][:sunset]).to be_a String
+       
+      end
+    end
   end
 end
 
