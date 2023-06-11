@@ -1,7 +1,7 @@
 class WeatherService
 
-  def get_weather(lat, lng)
-    get_url("/v1/forecast.json?q=#{lat},#{lng}&days=6")
+  def get_weather(lat, lon)
+    get_url("/v1/forecast.json?q=#{lat},#{lon}&days=6")
   end
 
   private
