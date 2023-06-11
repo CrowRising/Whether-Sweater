@@ -22,8 +22,45 @@ RSpec.describe 'ForecastData', type: :request do
       expect(weather_stats[:data][:attributes]).to have_key :hourly_weather
       expect(weather_stats[:data][:attributes]).to have_key :daily_weather
 
+      current_forecast = weather_stats[:data][:attributes][:current_weather]
 
+      expect(current_forecast).to be_a Hash
+      expect(current_forecast).to have_key :last_updated
+      expect(current_forecast[:last_updated]).to be_a String
+      expect(current_forecast).to have_key :temp_f
+      expect(current_forecast[:temp_f]).to be_a Float
+      expect(current_forecast).to have_key :condition
+      expect(current_forecast[:condition]).to be_a String
+      expect(current_forecast).to have_key :icon
+      expect(current_forecast[:icon]).to be_a String
+      expect(current_forecast).to have_key :humidity
+      expect(current_forecast[:humidity]).to be_an Integer
+      expect(current_forecast).to have_key :feelslike_f
+      expect(current_forecast[:feelslike_f]).to be_an Float
+      expect(current_forecast).to have_key :vis_miles
+      expect(current_forecast[:vis_miles]).to be_an Float
+      expect(current_forecast).to have_key :uvi
+      expect(current_forecast[:uvi]).to be_an Float
 
+      expect(weather_stats[:data][:attributes][:daily_weather]).to be_an Array
+
+      weather_stats[:data][:attributes][:daily_weather].each do |daily|
+        expect(daily).to be_a Hash
+        expect(daily).to have_key :date
+        expect(daily[:date]).to be_a String
+        expect(daily).to have_key :sunrise
+        expect(daily[:sunrise]).to be_a String
+        expect(daily).to have_key :sunset
+        expect(daily[:sunset]).to be_a String
+        expect(daily).to have_key :max_temp
+        expect(daily[:max_temp]).to eq(nil)
+        expect(daily).to have_key :min_temp
+        expect(daily[:min_temp]).to eq(nil)
+        expect(daily).to have_key :condition
+        expect(daily[:condition]).to be_a String
+        expect(daily).to have_key :icon
+        expect(daily[:icon]).to be_a String
+      end
     end
   end
 end
