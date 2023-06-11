@@ -1,0 +1,218 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.weatherapi.com/v1/forecast.json?days=6&key=668d93ffa98045cabe5170944231006&q=39.74001,-104.99202
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.6
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 11 Jun 2023 00:39:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-718
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 06/11/2023 00:36:38
+      Cdn-Edgestorageid:
+      - '941'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - 506fc0ac08afd20b1f84ef1bb3077510
+      Cdn-Cache:
+      - HIT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Denver","region":"Colorado","country":"United
+        States of America","lat":39.74,"lon":-104.99,"tz_id":"America/Denver","localtime_epoch":1686443798,"localtime":"2023-06-10
+        18:36"},"current":{"last_updated":"2023-06-10 18:30","temp_f":64.2,"is_day":1,"condition":{"text":"Patchy
+        light rain with thunder","icon":"//cdn.weatherapi.com/weather/64x64/day/386.png"},"wind_mph":9.4,"precip_in":0.0,"humidity":55,"feelslike_f":64.2,"vis_miles":9.0,"uv":6.0},"forecast":{"forecastday":[{"date":"2023-06-10","day":{"totalsnow_cm":0.0,"condition":{"text":"Patchy
+        rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"uv":4.0},"astro":{"sunrise":"05:32
+        AM","sunset":"08:27 PM"},"hour":[{"time":"2023-06-10 00:00","temp_f":57.4,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":71,"feelslike_f":57.4,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-10
+        01:00","temp_f":57.4,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":69,"feelslike_f":58.5,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-10
+        02:00","temp_f":56.3,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":69,"feelslike_f":57.2,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-10
+        03:00","temp_f":56.3,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":67,"feelslike_f":56.3,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-10
+        04:00","temp_f":55.6,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":68,"feelslike_f":55.6,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-10
+        05:00","temp_f":54.9,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":68,"feelslike_f":55.6,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-10
+        06:00","temp_f":54.5,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":67,"feelslike_f":53.8,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-10
+        07:00","temp_f":57.4,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":60,"feelslike_f":57.4,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-10
+        08:00","temp_f":61.7,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":50,"feelslike_f":61.7,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-10
+        09:00","temp_f":65.5,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":44,"feelslike_f":65.5,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-10
+        10:00","temp_f":69.3,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":38,"feelslike_f":69.3,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-10
+        11:00","temp_f":76.3,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":33,"feelslike_f":76.5,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-10
+        12:00","temp_f":75.9,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":29,"feelslike_f":75.7,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-10
+        13:00","temp_f":77.4,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":28,"feelslike_f":76.3,"vis_miles":6.0,"uv":7.0},{"time":"2023-06-10
+        14:00","temp_f":76.3,"condition":{"text":"Thundery outbreaks possible","icon":"//cdn.weatherapi.com/weather/64x64/day/200.png"},"humidity":29,"feelslike_f":75.9,"vis_miles":5.0,"uv":5.0},{"time":"2023-06-10
+        15:00","temp_f":69.1,"condition":{"text":"Patchy light rain with thunder","icon":"//cdn.weatherapi.com/weather/64x64/day/386.png"},"humidity":45,"feelslike_f":69.1,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-10
+        16:00","temp_f":70.5,"condition":{"text":"Thundery outbreaks possible","icon":"//cdn.weatherapi.com/weather/64x64/day/200.png"},"humidity":44,"feelslike_f":70.5,"vis_miles":5.0,"uv":5.0},{"time":"2023-06-10
+        17:00","temp_f":73.4,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":36,"feelslike_f":75.4,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-10
+        18:00","temp_f":69.4,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":50,"feelslike_f":69.4,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-10
+        19:00","temp_f":63.0,"condition":{"text":"Patchy light rain","icon":"//cdn.weatherapi.com/weather/64x64/day/293.png"},"humidity":66,"feelslike_f":63.0,"vis_miles":5.0,"uv":4.0},{"time":"2023-06-10
+        20:00","temp_f":59.7,"condition":{"text":"Thundery outbreaks possible","icon":"//cdn.weatherapi.com/weather/64x64/day/200.png"},"humidity":72,"feelslike_f":59.7,"vis_miles":5.0,"uv":4.0},{"time":"2023-06-10
+        21:00","temp_f":59.5,"condition":{"text":"Patchy light rain","icon":"//cdn.weatherapi.com/weather/64x64/night/293.png"},"humidity":74,"feelslike_f":59.5,"vis_miles":5.0,"uv":1.0},{"time":"2023-06-10
+        22:00","temp_f":58.8,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png"},"humidity":79,"feelslike_f":58.6,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-10
+        23:00","temp_f":57.0,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":79,"feelslike_f":55.8,"vis_miles":5.0,"uv":1.0}]},{"date":"2023-06-11","day":{"totalsnow_cm":0.0,"condition":{"text":"Moderate
+        rain","icon":"//cdn.weatherapi.com/weather/64x64/day/302.png"},"uv":3.0},"astro":{"sunrise":"05:32
+        AM","sunset":"08:28 PM"},"hour":[{"time":"2023-06-11 00:00","temp_f":55.4,"condition":{"text":"Partly
+        cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png"},"humidity":80,"feelslike_f":54.7,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-11
+        01:00","temp_f":54.9,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":82,"feelslike_f":54.9,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-11
+        02:00","temp_f":54.3,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":84,"feelslike_f":53.2,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-11
+        03:00","temp_f":53.4,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":84,"feelslike_f":53.2,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-11
+        04:00","temp_f":52.7,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":83,"feelslike_f":52.7,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-11
+        05:00","temp_f":53.2,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":82,"feelslike_f":53.2,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-11
+        06:00","temp_f":53.4,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":82,"feelslike_f":53.4,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-11
+        07:00","temp_f":55.0,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":77,"feelslike_f":55.0,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-11
+        08:00","temp_f":57.0,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":71,"feelslike_f":57.7,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-11
+        09:00","temp_f":58.5,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":68,"feelslike_f":58.8,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-11
+        10:00","temp_f":60.3,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":63,"feelslike_f":60.3,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-11
+        11:00","temp_f":61.3,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":61,"feelslike_f":61.3,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-11
+        12:00","temp_f":63.0,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":57,"feelslike_f":63.0,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-11
+        13:00","temp_f":65.1,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":54,"feelslike_f":65.1,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-11
+        14:00","temp_f":66.6,"condition":{"text":"Cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/119.png"},"humidity":51,"feelslike_f":66.6,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-11
+        15:00","temp_f":66.7,"condition":{"text":"Overcast","icon":"//cdn.weatherapi.com/weather/64x64/day/122.png"},"humidity":50,"feelslike_f":66.7,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-11
+        16:00","temp_f":65.1,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":58,"feelslike_f":65.1,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-11
+        17:00","temp_f":59.9,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":79,"feelslike_f":59.9,"vis_miles":5.0,"uv":4.0},{"time":"2023-06-11
+        18:00","temp_f":59.0,"condition":{"text":"Moderate rain at times","icon":"//cdn.weatherapi.com/weather/64x64/day/299.png"},"humidity":82,"feelslike_f":58.3,"vis_miles":4.0,"uv":4.0},{"time":"2023-06-11
+        19:00","temp_f":59.5,"condition":{"text":"Patchy light drizzle","icon":"//cdn.weatherapi.com/weather/64x64/day/263.png"},"humidity":80,"feelslike_f":59.5,"vis_miles":3.0,"uv":4.0},{"time":"2023-06-11
+        20:00","temp_f":58.5,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":82,"feelslike_f":58.5,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-11
+        21:00","temp_f":58.1,"condition":{"text":"Light rain shower","icon":"//cdn.weatherapi.com/weather/64x64/night/353.png"},"humidity":84,"feelslike_f":58.8,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-11
+        22:00","temp_f":55.4,"condition":{"text":"Light drizzle","icon":"//cdn.weatherapi.com/weather/64x64/night/266.png"},"humidity":90,"feelslike_f":52.9,"vis_miles":1.0,"uv":1.0},{"time":"2023-06-11
+        23:00","temp_f":52.0,"condition":{"text":"Moderate rain at times","icon":"//cdn.weatherapi.com/weather/64x64/night/299.png"},"humidity":94,"feelslike_f":48.2,"vis_miles":4.0,"uv":1.0}]},{"date":"2023-06-12","day":{"totalsnow_cm":0.0,"condition":{"text":"Heavy
+        rain","icon":"//cdn.weatherapi.com/weather/64x64/day/308.png"},"uv":3.0},"astro":{"sunrise":"05:32
+        AM","sunset":"08:28 PM"},"hour":[{"time":"2023-06-12 00:00","temp_f":52.7,"condition":{"text":"Heavy
+        rain at times","icon":"//cdn.weatherapi.com/weather/64x64/night/305.png"},"humidity":92,"feelslike_f":50.7,"vis_miles":3.0,"uv":1.0},{"time":"2023-06-12
+        01:00","temp_f":52.5,"condition":{"text":"Patchy light drizzle","icon":"//cdn.weatherapi.com/weather/64x64/night/263.png"},"humidity":91,"feelslike_f":49.5,"vis_miles":3.0,"uv":1.0},{"time":"2023-06-12
+        02:00","temp_f":52.5,"condition":{"text":"Patchy light drizzle","icon":"//cdn.weatherapi.com/weather/64x64/night/263.png"},"humidity":86,"feelslike_f":49.8,"vis_miles":3.0,"uv":1.0},{"time":"2023-06-12
+        03:00","temp_f":52.2,"condition":{"text":"Moderate rain at times","icon":"//cdn.weatherapi.com/weather/64x64/night/299.png"},"humidity":84,"feelslike_f":49.1,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-12
+        04:00","temp_f":52.0,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":84,"feelslike_f":49.6,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-12
+        05:00","temp_f":52.2,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":84,"feelslike_f":51.8,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-12
+        06:00","temp_f":51.4,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":88,"feelslike_f":49.5,"vis_miles":5.0,"uv":3.0},{"time":"2023-06-12
+        07:00","temp_f":52.5,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":90,"feelslike_f":49.6,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-12
+        08:00","temp_f":54.7,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":84,"feelslike_f":52.9,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-12
+        09:00","temp_f":57.6,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":77,"feelslike_f":56.5,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-12
+        10:00","temp_f":61.0,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":68,"feelslike_f":61.0,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-12
+        11:00","temp_f":65.3,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":58,"feelslike_f":65.3,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-12
+        12:00","temp_f":68.0,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":53,"feelslike_f":68.0,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-12
+        13:00","temp_f":70.3,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":51,"feelslike_f":70.3,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-12
+        14:00","temp_f":71.6,"condition":{"text":"Thundery outbreaks possible","icon":"//cdn.weatherapi.com/weather/64x64/day/200.png"},"humidity":47,"feelslike_f":75.7,"vis_miles":5.0,"uv":5.0},{"time":"2023-06-12
+        15:00","temp_f":72.9,"condition":{"text":"Light rain shower","icon":"//cdn.weatherapi.com/weather/64x64/day/353.png"},"humidity":43,"feelslike_f":75.9,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-12
+        16:00","temp_f":63.5,"condition":{"text":"Patchy light rain with thunder","icon":"//cdn.weatherapi.com/weather/64x64/day/386.png"},"humidity":69,"feelslike_f":63.5,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-12
+        17:00","temp_f":61.2,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":76,"feelslike_f":61.2,"vis_miles":5.0,"uv":4.0},{"time":"2023-06-12
+        18:00","temp_f":58.8,"condition":{"text":"Moderate rain at times","icon":"//cdn.weatherapi.com/weather/64x64/day/299.png"},"humidity":84,"feelslike_f":54.9,"vis_miles":4.0,"uv":3.0},{"time":"2023-06-12
+        19:00","temp_f":56.7,"condition":{"text":"Patchy light rain","icon":"//cdn.weatherapi.com/weather/64x64/day/293.png"},"humidity":88,"feelslike_f":52.9,"vis_miles":5.0,"uv":3.0},{"time":"2023-06-12
+        20:00","temp_f":54.9,"condition":{"text":"Cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/119.png"},"humidity":85,"feelslike_f":54.0,"vis_miles":6.0,"uv":3.0},{"time":"2023-06-12
+        21:00","temp_f":55.2,"condition":{"text":"Moderate rain at times","icon":"//cdn.weatherapi.com/weather/64x64/night/299.png"},"humidity":84,"feelslike_f":54.9,"vis_miles":4.0,"uv":1.0},{"time":"2023-06-12
+        22:00","temp_f":55.0,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":84,"feelslike_f":55.8,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-12
+        23:00","temp_f":54.5,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":86,"feelslike_f":54.7,"vis_miles":5.0,"uv":1.0}]},{"date":"2023-06-13","day":{"totalsnow_cm":0.0,"condition":{"text":"Heavy
+        rain","icon":"//cdn.weatherapi.com/weather/64x64/day/308.png"},"uv":3.0},"astro":{"sunrise":"05:32
+        AM","sunset":"08:29 PM"},"hour":[{"time":"2023-06-13 00:00","temp_f":54.0,"condition":{"text":"Cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/119.png"},"humidity":86,"feelslike_f":54.7,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-13
+        01:00","temp_f":54.0,"condition":{"text":"Thundery outbreaks possible","icon":"//cdn.weatherapi.com/weather/64x64/night/200.png"},"humidity":86,"feelslike_f":55.0,"vis_miles":5.0,"uv":1.0},{"time":"2023-06-13
+        02:00","temp_f":53.4,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png"},"humidity":88,"feelslike_f":53.8,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-13
+        03:00","temp_f":53.1,"condition":{"text":"Light rain shower","icon":"//cdn.weatherapi.com/weather/64x64/night/353.png"},"humidity":88,"feelslike_f":53.6,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-13
+        04:00","temp_f":52.2,"condition":{"text":"Light rain shower","icon":"//cdn.weatherapi.com/weather/64x64/night/353.png"},"humidity":91,"feelslike_f":51.3,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-13
+        05:00","temp_f":51.8,"condition":{"text":"Light rain shower","icon":"//cdn.weatherapi.com/weather/64x64/night/353.png"},"humidity":93,"feelslike_f":50.5,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-13
+        06:00","temp_f":50.7,"condition":{"text":"Moderate rain","icon":"//cdn.weatherapi.com/weather/64x64/day/302.png"},"humidity":91,"feelslike_f":48.6,"vis_miles":4.0,"uv":3.0},{"time":"2023-06-13
+        07:00","temp_f":51.3,"condition":{"text":"Light rain","icon":"//cdn.weatherapi.com/weather/64x64/day/296.png"},"humidity":91,"feelslike_f":48.7,"vis_miles":5.0,"uv":3.0},{"time":"2023-06-13
+        08:00","temp_f":51.6,"condition":{"text":"Light rain","icon":"//cdn.weatherapi.com/weather/64x64/day/296.png"},"humidity":90,"feelslike_f":50.4,"vis_miles":5.0,"uv":3.0},{"time":"2023-06-13
+        09:00","temp_f":51.4,"condition":{"text":"Moderate rain","icon":"//cdn.weatherapi.com/weather/64x64/day/302.png"},"humidity":90,"feelslike_f":49.8,"vis_miles":4.0,"uv":3.0},{"time":"2023-06-13
+        10:00","temp_f":51.8,"condition":{"text":"Light rain","icon":"//cdn.weatherapi.com/weather/64x64/day/296.png"},"humidity":94,"feelslike_f":49.6,"vis_miles":5.0,"uv":3.0},{"time":"2023-06-13
+        11:00","temp_f":52.7,"condition":{"text":"Light rain","icon":"//cdn.weatherapi.com/weather/64x64/day/296.png"},"humidity":93,"feelslike_f":50.5,"vis_miles":5.0,"uv":3.0},{"time":"2023-06-13
+        12:00","temp_f":52.9,"condition":{"text":"Light rain","icon":"//cdn.weatherapi.com/weather/64x64/day/296.png"},"humidity":94,"feelslike_f":50.9,"vis_miles":5.0,"uv":3.0},{"time":"2023-06-13
+        13:00","temp_f":53.6,"condition":{"text":"Patchy light rain","icon":"//cdn.weatherapi.com/weather/64x64/day/293.png"},"humidity":93,"feelslike_f":52.5,"vis_miles":5.0,"uv":3.0},{"time":"2023-06-13
+        14:00","temp_f":54.9,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":90,"feelslike_f":54.9,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-13
+        15:00","temp_f":56.1,"condition":{"text":"Patchy light rain","icon":"//cdn.weatherapi.com/weather/64x64/day/293.png"},"humidity":87,"feelslike_f":57.2,"vis_miles":5.0,"uv":3.0},{"time":"2023-06-13
+        16:00","temp_f":63.1,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":72,"feelslike_f":63.1,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-13
+        17:00","temp_f":64.6,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":67,"feelslike_f":64.6,"vis_miles":5.0,"uv":4.0},{"time":"2023-06-13
+        18:00","temp_f":64.4,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":69,"feelslike_f":64.4,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-13
+        19:00","temp_f":63.5,"condition":{"text":"Patchy light rain with thunder","icon":"//cdn.weatherapi.com/weather/64x64/day/386.png"},"humidity":75,"feelslike_f":63.5,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-13
+        20:00","temp_f":59.0,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":79,"feelslike_f":60.4,"vis_miles":5.0,"uv":4.0},{"time":"2023-06-13
+        21:00","temp_f":56.8,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":83,"feelslike_f":57.0,"vis_miles":5.0,"uv":1.0},{"time":"2023-06-13
+        22:00","temp_f":55.9,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":86,"feelslike_f":55.6,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-13
+        23:00","temp_f":55.4,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":86,"feelslike_f":55.6,"vis_miles":6.0,"uv":1.0}]},{"date":"2023-06-14","day":{"totalsnow_cm":0.0,"condition":{"text":"Patchy
+        rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"uv":4.0},"astro":{"sunrise":"05:32
+        AM","sunset":"08:29 PM"},"hour":[{"time":"2023-06-14 00:00","temp_f":54.3,"condition":{"text":"Patchy
+        rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":85,"feelslike_f":54.1,"vis_miles":5.0,"uv":1.0},{"time":"2023-06-14
+        01:00","temp_f":53.6,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":84,"feelslike_f":52.9,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-14
+        02:00","temp_f":52.7,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":82,"feelslike_f":51.3,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-14
+        03:00","temp_f":52.0,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png"},"humidity":80,"feelslike_f":50.5,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-14
+        04:00","temp_f":51.6,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":78,"feelslike_f":49.8,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-14
+        05:00","temp_f":51.6,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":77,"feelslike_f":50.0,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-14
+        06:00","temp_f":52.2,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":76,"feelslike_f":51.3,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-14
+        07:00","temp_f":54.9,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":74,"feelslike_f":54.7,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-14
+        08:00","temp_f":58.6,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":66,"feelslike_f":60.3,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-14
+        09:00","temp_f":62.1,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":59,"feelslike_f":62.1,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-14
+        10:00","temp_f":66.2,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":50,"feelslike_f":66.2,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-14
+        11:00","temp_f":71.6,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":40,"feelslike_f":75.2,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-14
+        12:00","temp_f":71.4,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":43,"feelslike_f":71.4,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-14
+        13:00","temp_f":75.7,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":34,"feelslike_f":76.3,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-14
+        14:00","temp_f":78.4,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":30,"feelslike_f":77.4,"vis_miles":6.0,"uv":7.0},{"time":"2023-06-14
+        15:00","temp_f":78.3,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":28,"feelslike_f":77.0,"vis_miles":6.0,"uv":7.0},{"time":"2023-06-14
+        16:00","temp_f":77.2,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":30,"feelslike_f":76.6,"vis_miles":6.0,"uv":7.0},{"time":"2023-06-14
+        17:00","temp_f":78.1,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":33,"feelslike_f":77.5,"vis_miles":6.0,"uv":7.0},{"time":"2023-06-14
+        18:00","temp_f":74.8,"condition":{"text":"Thundery outbreaks possible","icon":"//cdn.weatherapi.com/weather/64x64/day/200.png"},"humidity":35,"feelslike_f":75.9,"vis_miles":5.0,"uv":5.0},{"time":"2023-06-14
+        19:00","temp_f":73.2,"condition":{"text":"Thundery outbreaks possible","icon":"//cdn.weatherapi.com/weather/64x64/day/200.png"},"humidity":39,"feelslike_f":75.6,"vis_miles":5.0,"uv":5.0},{"time":"2023-06-14
+        20:00","temp_f":69.1,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":44,"feelslike_f":69.1,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-14
+        21:00","temp_f":68.2,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png"},"humidity":45,"feelslike_f":68.2,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-14
+        22:00","temp_f":66.4,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":49,"feelslike_f":66.4,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-14
+        23:00","temp_f":64.4,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":53,"feelslike_f":64.4,"vis_miles":6.0,"uv":1.0}]},{"date":"2023-06-15","day":{"totalsnow_cm":0.0,"condition":{"text":"Patchy
+        rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"uv":5.0},"astro":{"sunrise":"05:32
+        AM","sunset":"08:29 PM"},"hour":[{"time":"2023-06-15 00:00","temp_f":62.6,"condition":{"text":"Partly
+        cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png"},"humidity":55,"feelslike_f":62.6,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-15
+        01:00","temp_f":61.7,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":56,"feelslike_f":61.7,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-15
+        02:00","temp_f":60.6,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png"},"humidity":57,"feelslike_f":60.6,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-15
+        03:00","temp_f":59.7,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":57,"feelslike_f":59.7,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-15
+        04:00","temp_f":59.2,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":58,"feelslike_f":58.8,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-15
+        05:00","temp_f":58.5,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png"},"humidity":59,"feelslike_f":58.1,"vis_miles":6.0,"uv":1.0},{"time":"2023-06-15
+        06:00","temp_f":57.9,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":60,"feelslike_f":57.2,"vis_miles":6.0,"uv":4.0},{"time":"2023-06-15
+        07:00","temp_f":62.1,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":54,"feelslike_f":61.5,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-15
+        08:00","temp_f":66.2,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":48,"feelslike_f":66.0,"vis_miles":6.0,"uv":5.0},{"time":"2023-06-15
+        09:00","temp_f":70.3,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":43,"feelslike_f":70.3,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-15
+        10:00","temp_f":74.8,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":37,"feelslike_f":77.2,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-15
+        11:00","temp_f":79.5,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":32,"feelslike_f":79.3,"vis_miles":6.0,"uv":7.0},{"time":"2023-06-15
+        12:00","temp_f":84.0,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":26,"feelslike_f":81.3,"vis_miles":6.0,"uv":7.0},{"time":"2023-06-15
+        13:00","temp_f":83.7,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":26,"feelslike_f":81.0,"vis_miles":6.0,"uv":7.0},{"time":"2023-06-15
+        14:00","temp_f":83.5,"condition":{"text":"Sunny","icon":"//cdn.weatherapi.com/weather/64x64/day/113.png"},"humidity":25,"feelslike_f":80.6,"vis_miles":6.0,"uv":7.0},{"time":"2023-06-15
+        15:00","temp_f":83.1,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":25,"feelslike_f":80.2,"vis_miles":6.0,"uv":7.0},{"time":"2023-06-15
+        16:00","temp_f":80.4,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":30,"feelslike_f":79.0,"vis_miles":6.0,"uv":6.0},{"time":"2023-06-15
+        17:00","temp_f":77.9,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png"},"humidity":35,"feelslike_f":77.9,"vis_miles":5.0,"uv":7.0},{"time":"2023-06-15
+        18:00","temp_f":75.2,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":40,"feelslike_f":76.6,"vis_miles":5.0,"uv":5.0},{"time":"2023-06-15
+        19:00","temp_f":71.8,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":46,"feelslike_f":72.7,"vis_miles":5.0,"uv":5.0},{"time":"2023-06-15
+        20:00","temp_f":68.4,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png"},"humidity":52,"feelslike_f":68.4,"vis_miles":5.0,"uv":5.0},{"time":"2023-06-15
+        21:00","temp_f":64.9,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":58,"feelslike_f":64.9,"vis_miles":5.0,"uv":1.0},{"time":"2023-06-15
+        22:00","temp_f":63.9,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":60,"feelslike_f":63.9,"vis_miles":5.0,"uv":1.0},{"time":"2023-06-15
+        23:00","temp_f":62.8,"condition":{"text":"Patchy rain possible","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png"},"humidity":63,"feelslike_f":62.8,"vis_miles":6.0,"uv":1.0}]}]}}'
+  recorded_at: Sun, 11 Jun 2023 00:39:28 GMT
+recorded_with: VCR 6.1.0
