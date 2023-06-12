@@ -7,10 +7,8 @@ RSpec.describe Weather do
         current_weather: {
           last_updated: "2023-06-10 19:45",
           temp_f: 62.2,
-          condition: {
-              text: "Moderate or heavy rain with thunder",
-              icon: "//cdn.weatherapi.com/weather/64x64/day/389.png"
-          },
+          condition: "Moderate or heavy rain with thunder",
+          icon: "//cdn.weatherapi.com/weather/64x64/day/389.png",
           humidity: 55,
           feelslike_f: 62.2,
           vis_miles: 9.0,
@@ -48,14 +46,15 @@ RSpec.describe Weather do
 
       expect(weather_stats).to be_a Weather
       expect(weather_stats.current_weather).to be_a Hash
-      expect(weather_stats.current_forecast).to have_key :last_updated
-      expect(weather_stats.current_forecast).to have_key :temp_f
-      expect(weather_stats.current_forecast).to have_key :condition
-      expect(weather_stats.current_forecast).to have_key :icon
-      expect(weather_stats.current_forecast).to have_key :humidity
-      expect(weather_stats.current_forecast).to have_key :feelslike_f
-      expect(weather_stats.current_forecast).to have_key :vis_miles
-      expect(weather_stats.current_forecast).to have_key :uvi
+      expect(weather_stats.current_weather).to have_key :last_updated
+      expect(weather_stats.current_weather).to have_key :temp_f
+      expect(weather_stats.current_weather).to have_key :condition
+    
+      expect(weather_stats.current_weather).to have_key :icon
+      expect(weather_stats.current_weather).to have_key :humidity
+      expect(weather_stats.current_weather).to have_key :feelslike_f
+      expect(weather_stats.current_weather).to have_key :vis_miles
+      expect(weather_stats.current_weather).to have_key :uvi
 
       expect(weather_stats.daily_weather).to be_an Array
       expect(weather_stats.daily_weather.count).to eq(2)
