@@ -69,11 +69,20 @@ class WeatherFacade
     end
   end
 
+  def books(location, quantity)
+    book_service = BookService.new
+    book_results = book_service.get_books(location, quantity)
+
+    BooksFacade.new(book_results).books
+  end
+
+
   def all_weather_data
     {
-      hourly_weather:,
-      daily_weather:,
-      current_weather:
+      hourly_weather: hourly_weather,
+      daily_weather: daily_weather,
+      current_weather: current_weather,
+      books: books(@map, 5)
     }
   end
 end
