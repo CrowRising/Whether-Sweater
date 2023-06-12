@@ -6,6 +6,7 @@ RSpec.describe 'ForecastData', type: :request do
       get '/api/v1/forecast?location=denver,co'
 
       expect(response).to have_http_status :success
+      expect(response.status).to eq(200)
 
       weather_stats = JSON.parse(response.body, symbolize_names: true)
 
@@ -43,7 +44,7 @@ RSpec.describe 'ForecastData', type: :request do
       expect(current_forecast[:uvi]).to be_an Float
 
       expect(weather_stats[:data][:attributes][:daily_weather]).to be_an Array
-  #  require 'pry'; binding.pry   
+
       weather_stats[:data][:attributes][:daily_weather].each do |daily|
         expect(daily).to be_a Hash
         expect(daily).to have_key :date
@@ -60,6 +61,20 @@ RSpec.describe 'ForecastData', type: :request do
         expect(daily[:condition]).to be_a String
         expect(daily).to have_key :icon
         expect(daily[:icon]).to be_a String
+
+        expect(weather_stats[:data][:attributes][:hourly_weather]).to be_an Array
+
+        weather_stats[:data][:attributes][:hourly_weather].each do |hourly|
+          expect(hourly).to be_a Hash
+          expect(hourly).to have_key :time
+          expect(hourly[:time]).to be_a String
+          expect(hourly).to have_key :temp
+          expect(hourly[:temp]).to be_a Float
+          expect(hourly).to have_key :condition
+          expect(hourly[:condition]).to be_a String
+          expect(hourly).to have_key :icon
+          expect(hourly[:icon]).to be_a String
+        end
       end
     end
   end
