@@ -23,6 +23,11 @@ RSpec.describe 'ForecastData', type: :request do
       expect(weather_stats[:data][:attributes]).to have_key :hourly_weather
       expect(weather_stats[:data][:attributes]).to have_key :daily_weather
 
+      expect(weather_stats[:data][:attributes]).to_not have_key :country
+      expect(weather_stats[:data][:attributes]).to_not have_key :temp_c
+      expect(weather_stats[:data][:attributes]).to_not have_key :wind_mph
+      expect(weather_stats[:data][:attributes]).to_not have_key :feelslike_c
+
       current_forecast = weather_stats[:data][:attributes][:current_weather]
 
       expect(current_forecast).to be_a Hash
