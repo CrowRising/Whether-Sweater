@@ -8,8 +8,14 @@ class WeatherFacade
   end
 
   def weather
-    # require 'pry'; binding.pry
     @weather ||= Weather.new(all_weather_data)
+  end
+
+  def book_weather
+    {
+      summary: current_weather[:condition],
+      temperature: "#{current_weather[:temp_f]} F"
+    }
   end
 
   private
@@ -69,20 +75,12 @@ class WeatherFacade
     end
   end
 
-  def books(location, quantity)
-    book_service = BookService.new
-    book_results = book_service.get_books(location, quantity)
-
-    BooksFacade.new(book_results).books
-  end
-
 
   def all_weather_data
     {
       hourly_weather: hourly_weather,
       daily_weather: daily_weather,
-      current_weather: current_weather,
-      books: books(@map, 5)
+      current_weather: current_weather
     }
   end
 end
