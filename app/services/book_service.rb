@@ -1,6 +1,6 @@
 class BookService
 
-  def get_books_by_subject(subject)
+  def get_books(subject)
     get_url("/search.json?&q=#{subject}&limit=5")
   end
 
