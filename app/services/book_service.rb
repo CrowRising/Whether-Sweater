@@ -1,11 +1,9 @@
 class BookService
-
-  def get_books(subject)
-    get_url("/search.json?&q=#{subject}&limit=5")
+  def get_books(subject, quantity)
+    get_url("/search.json?q=#{subject}&limit=#{quantity}")
   end
 
-
-private
+  private
 
   def get_url(url)
     response = conn.get(url)
