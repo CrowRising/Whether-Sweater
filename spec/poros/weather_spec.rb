@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Weather do
   describe 'weather poros' do
     it 'exists and has attributes' do
-      forcast_data = {
+      forecast_data = {
         current_weather: {
           last_updated: "2023-06-10 19:45",
           temp_f: 62.2,
@@ -44,6 +44,36 @@ RSpec.describe Weather do
         ]
       }
 
+      weather_stats = Weather.new(forecast_data)
+
+      expect(weather_stats).to be_a Weather
+      expect(weather_stats.current_weather).to be_a Hash
+      expect(weather_stats.current_forecast).to have_key :last_updated
+      expect(weather_stats.current_forecast).to have_key :temp_f
+      expect(weather_stats.current_forecast).to have_key :condition
+      expect(weather_stats.current_forecast).to have_key :icon
+      expect(weather_stats.current_forecast).to have_key :humidity
+      expect(weather_stats.current_forecast).to have_key :feelslike_f
+      expect(weather_stats.current_forecast).to have_key :vis_miles
+      expect(weather_stats.current_forecast).to have_key :uvi
+
+      expect(weather_stats.daily_weather).to be_an Array
+      expect(weather_stats.daily_weather.count).to eq(2)
+      expect(weather_stats.daily_weather.first).to be_a Hash
+      expect(weather_stats.daily_weather.first).to have_key :date
+      expect(weather_stats.daily_weather.first).to have_key :sunrise
+      expect(weather_stats.daily_weather.first).to have_key :sunset
+      expect(weather_stats.daily_weather.first).to have_key :max_temp
+      expect(weather_stats.daily_weather.first).to have_key :min_temp
+      expect(weather_stats.daily_weather.first).to have_key :icon
+
+      expect(weather_stats.hourly_weather).to be_an Array
+      expect(weather_stats.hourly_weather.count).to eq(1)
+      expect(weather_stats.hourly_weather.first).to be_a Hash
+      expect(weather_stats.hourly_weather.first).to have_key :time
+      expect(weather_stats.hourly_weather.first).to have_key :temp
+      expect(weather_stats.hourly_weather.first).to have_key :condition
+      expect(weather_stats.hourly_weather.first).to have_key :icon
     end
   end
 end
