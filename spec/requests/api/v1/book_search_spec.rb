@@ -39,7 +39,6 @@ RSpec.describe 'Book Search API', type: :request do
       expect(book_search_data[:data][:attributes][:books].first[:title]).to be_a String
       expect(book_search_data[:data][:attributes][:books].first).to have_key :publisher
       expect(book_search_data[:data][:attributes][:books].first[:publisher]).to be_an Array
-      
     end
   end
 end
