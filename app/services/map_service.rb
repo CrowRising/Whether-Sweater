@@ -1,13 +1,14 @@
-class MapService
+# frozen_string_literal: true
 
+class MapService
   def get_map(location)
     get_url("/geocoding/v1/address?location=#{location}")
   end
 
   private
 
-  def conn 
-    Faraday.new(url: "https://www.mapquestapi.com") do |faraday|
+  def conn
+    Faraday.new(url: 'https://www.mapquestapi.com') do |faraday|
       faraday.params['key'] = ENV['MAP_KEY']
     end
   end
