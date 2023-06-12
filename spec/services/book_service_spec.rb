@@ -4,7 +4,7 @@ RSpec.describe 'Book Search API' do
   describe 'happy path' do
     it 'returns book data', :vcr do
       book_service = BookService.new
-      book_results = book_service.get_books('Denver, CO')
+      book_results = book_service.get_books('Denver, CO', 5)
 
       expect(book_results).to be_a Hash
       expect(book_results).to have_key :docs
