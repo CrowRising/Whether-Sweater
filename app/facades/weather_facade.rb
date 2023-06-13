@@ -18,6 +18,13 @@ class WeatherFacade
     }
   end
 
+  def activity_weather
+    {
+      summary: current_weather[:condition],
+      temperature: "#{current_weather[:temp_f]} F"
+    }
+  end
+
   private
 
   def map_service
