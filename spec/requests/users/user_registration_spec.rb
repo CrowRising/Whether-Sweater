@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'User Registration API' do
@@ -9,9 +11,9 @@ RSpec.describe 'User Registration API' do
         password_confirmation: 'NoW@yJ0se'
       }
 
-      headers = {'CONTENT_TYPE' => 'application/json'}
+      headers = { 'CONTENT_TYPE' => 'application/json' }
       # require 'pry'; binding.pry
-      post '/api/v1/users', headers: headers, params: JSON.generate(details)
+      post '/api/v1/users', headers:, params: JSON.generate(details)
 
       expect(response).to be_successful
       expect(response.status).to eq(201)
@@ -33,9 +35,28 @@ RSpec.describe 'User Registration API' do
       expect(user_details[:data][:attributes]).to have_key :api_key
       expect(user_details[:data][:attributes][:api_key]).to eq(new_user.api_key)
       expect(new_user.api_key.length).to eq(20)
+    end
+ 
+    it 'returns an error if email is already taken' do
+      User.create!(email: 'yourmom@aol.com', password: 'NoW@yJ0se', password_confirmation: 'NoW@yJ0se')
+      details = {
+        email: 'yourmom@aol.com',
+        password: 'NoW@yJ0se',
+        password_confirmation: 'NoW@yJ0se'
+      }
 
+      headers = { 'CONTENT_TYPE' => 'application/json' }  
+      post '/api/v1/users', headers:, params: JSON.generate(details)
 
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+
+      error_details = JSON.parse(response.body, symbolize_names: true)
+
+      expect(error_details).to be_a Hash
+      expect(error_details).to have_key :errors
+      expect(error_details[:errors]).to be_an Array
+      expect(error_details[:errors][0]).to eq("Email has already been taken")
     end
   end
 end
-
