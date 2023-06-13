@@ -1,6 +1,9 @@
-class Api::V1::SessionsController < ApplicationController
+# frozen_string_literal: true
 
-  def create
-    
+module Api
+  module V1
+    class SessionsController < ApplicationController
+      def create; end
+    end
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   before_create :set_api_key
   validates :email, presence: true, uniqueness: true

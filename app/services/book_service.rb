@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BookService
   def get_books(subject, quantity)
     get_url("/search.json?q=#{subject}&limit=#{quantity}")
@@ -11,6 +13,6 @@ class BookService
   end
 
   def conn
-    Faraday.new(url: 'https://openlibrary.org') 
+    Faraday.new(url: 'https://openlibrary.org')
   end
 end

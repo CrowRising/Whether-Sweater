@@ -213,14 +213,18 @@
         "lines": [
           1,
           1,
-          1,
-          1,
-          null,
-          null,
+          3,
+          3,
           1,
           null,
+          2,
+          null,
+          null,
+          null,
           1,
+          null,
           1,
+          3,
           null,
           null
         ]
@@ -235,6 +239,8 @@
       },
       "/Users/crowrising/Turing/3Mod/Projects/whether_sweater/app/models/user.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -242,7 +248,7 @@
           1,
           null,
           1,
-          1,
+          2,
           null,
           null
         ]
@@ -258,6 +264,8 @@
       },
       "/Users/crowrising/Turing/3Mod/Projects/whether_sweater/app/serializers/users_serializer.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -265,6 +273,6 @@
         ]
       }
     },
-    "timestamp": 1686618222
+    "timestamp": 1686620242
   }
 }

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Book Search API' do
@@ -9,7 +11,7 @@ RSpec.describe 'Book Search API' do
       expect(book_results).to be_a Hash
       expect(book_results).to have_key :docs
       expect(book_results[:docs]).to be_an Array
-      
+
       book = book_results[:docs].first
 
       expect(book).to have_key :title

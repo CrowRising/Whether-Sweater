@@ -38,7 +38,7 @@ RSpec.describe 'User Registration API' do
     end
  
     it 'returns an error if email is already taken' do
-      User.create!(email: 'yourmom@aol.com', password: 'NoW@yJ0se', password_confirmation: 'NoW@yJ0se')
+      User.create!(email: 'yourmom@aol.com', password: 'NoW@yJ0se', password_confirmation: 'NoW@yJ0se', api_key: '12345678901234567890')
       details = {
         email: 'yourmom@aol.com',
         password: 'NoW@yJ0se',
@@ -56,7 +56,27 @@ RSpec.describe 'User Registration API' do
       expect(error_details).to be_a Hash
       expect(error_details).to have_key :errors
       expect(error_details[:errors]).to be_an Array
-      expect(error_details[:errors][0]).to eq("Email has already been taken")
+      expect(error_details[:errors].first).to eq("Email has already been taken")
+    end
+
+    it 'returns an error if email is left blank' do
+      details = {
+        email: '',
+        password: 'NoW@yJ0se',
+        password_confirmation: 'N0W@yJ0se'
+      }
+
+      post '/api/v1/users', headers:, params: JSON.generate(details)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+
+      error_details = JSON.parse(response.body, symbolize_names: true)
+
+      expect(error_details).to be_a Hash
+      expect(error_details).to have_key :errors
+      expect(error_details[:errors]).to be_an Array
+      expect(error_details[:errors].first).to eq("Email can't be blank")
     end
   end
 end
