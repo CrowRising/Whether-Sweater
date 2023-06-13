@@ -203,8 +203,33 @@
           1,
           1,
           1,
+          1,
           null,
           null,
+          null
+        ]
+      },
+      "/Users/crowrising/Turing/3Mod/Projects/whether_sweater/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/crowrising/Turing/3Mod/Projects/whether_sweater/app/controllers/application_controller.rb": {
+        "lines": [
+          null,
+          null,
+          1,
           null
         ]
       },
@@ -215,6 +240,10 @@
           1,
           null,
           1,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -226,8 +255,16 @@
           1,
           null
         ]
+      },
+      "/Users/crowrising/Turing/3Mod/Projects/whether_sweater/app/serializers/users_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1686614060
+    "timestamp": 1686618222
   }
 }
