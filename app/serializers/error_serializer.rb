@@ -1,17 +1,12 @@
 class ErrorSerializer
 
-  def initialize(error)  
-    @error = error
-  end
-
-  def error_message
-    {
-      errrors: [
+  def self.serialize(error)
+    { 
+      errors: [
         {
-          details: @error.message,
-          status: @error.status
+          detail: error
+          }
+          ]
         }
-      ]
-    }
   end
 end

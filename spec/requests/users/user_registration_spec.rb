@@ -49,17 +49,18 @@ RSpec.describe 'User Registration API' do
       post '/api/v1/users', headers:, params: JSON.generate(details)
 
       expect(response).to_not be_successful
-      expect(response.status).to eq(400)
+      expect(response.status).to eq(409)
 
       error_details = JSON.parse(response.body, symbolize_names: true)
 
       expect(error_details).to be_a Hash
       expect(error_details).to have_key :errors
       expect(error_details[:errors]).to be_an Array
-      expect(error_details[:errors].first).to eq("Email has already been taken")
+      expect(error_details[:errors][0]).to have_key :detail
+      expect(error_details[:errors][0][:detail]).to eq("Validation failed: Email has already been taken")
     end
 
-    it 'returns an error if email is left blank' do
+    it 'returns an error if email or password is left blank' do
       details = {
         email: '',
         password: 'NoW@yJ0se',
@@ -69,14 +70,15 @@ RSpec.describe 'User Registration API' do
       post '/api/v1/users', headers:, params: JSON.generate(details)
 
       expect(response).to_not be_successful
-      expect(response.status).to eq(400)
+      expect(response.status).to eq(422)
 
       error_details = JSON.parse(response.body, symbolize_names: true)
 
       expect(error_details).to be_a Hash
       expect(error_details).to have_key :errors
       expect(error_details[:errors]).to be_an Array
-      expect(error_details[:errors].first).to eq("Email can't be blank")
+      expect(error_details[:errors][0]).to have_key :detail
+      expect(error_details[:errors][0][:detail]).to eq("Validation failed: Email can't be blank, Password can't be blank")
     end
   end
 end
