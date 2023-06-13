@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get '/forecast', to: 'forecast_data#index'
       get '/book-search', to: 'book_search#index'
       post '/users', to: 'users#create'
+      get 'activities', to: 'activities#index'
     end
   end
 end
