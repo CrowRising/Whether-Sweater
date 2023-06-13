@@ -75,12 +75,11 @@ class WeatherFacade
     end
   end
 
-
   def all_weather_data
     {
-      hourly_weather: hourly_weather,
-      daily_weather: daily_weather,
-      current_weather: current_weather
+      hourly_weather:,
+      daily_weather:,
+      current_weather:
     }
   end
 end

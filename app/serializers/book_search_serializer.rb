@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BookSearchSerializer
   include JSONAPI::Serializer
   set_id { nil }

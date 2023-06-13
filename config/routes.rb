@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/forecast', to: 'forecast_data#index'
       get '/book-search', to: 'book_search#index'
+      post '/users', to: 'users#create'
     end
   end
 end

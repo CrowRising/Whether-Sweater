@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'Book Search API', type: :request do
@@ -18,7 +20,7 @@ RSpec.describe 'Book Search API', type: :request do
       expect(book_search_data[:data]).to have_key :type
       expect(book_search_data[:data][:type]).to eq('books')
       expect(book_search_data[:data]).to have_key :attributes
-      expect(book_search_data[:data][:attributes]).to be_a Hash 
+      expect(book_search_data[:data][:attributes]).to be_a Hash
       expect(book_search_data[:data][:attributes]).to have_key :destination
       expect(book_search_data[:data][:attributes][:destination]).to be_a String
       expect(book_search_data[:data][:attributes]).to have_key :forecast
@@ -39,7 +41,6 @@ RSpec.describe 'Book Search API', type: :request do
       expect(book_search_data[:data][:attributes][:books].first[:title]).to be_a String
       expect(book_search_data[:data][:attributes][:books].first).to have_key :publisher
       expect(book_search_data[:data][:attributes][:books].first[:publisher]).to be_an Array
-      
     end
   end
 end

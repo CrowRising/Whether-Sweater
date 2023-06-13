@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BooksFacade
   def initialize(location, quantity)
     @locations = location
@@ -29,14 +31,14 @@ class BooksFacade
   private
 
   def book_service
-    @_book_service ||= BookService.new
+    @book_service ||= BookService.new
   end
 
   def book_results
-    @_book_results ||= book_service.get_books(@locations, @quantity)
+    @book_results ||= book_service.get_books(@locations, @quantity)
   end
 
   def weather_facade
-    @_weather_facade ||= WeatherFacade.new(@locations)
+    @weather_facade ||= WeatherFacade.new(@locations)
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Books
   attr_reader :destination, :forecast, :total_books_found, :books
 
